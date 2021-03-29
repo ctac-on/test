@@ -9,7 +9,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "start": "rollup -c -w && npm run prettier-watch",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prettier-watch": "onchange 'src/**/*' -- prettier --write {{changed}}",
+    "lint": "eslint src/**/ --ext .js --fix"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,23 @@
     "@svgr/rollup": "^5.5.0",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-flowtype": "^5.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lint-staged": "^10.5.4",
+    "onchange": "7.1.0",
     "postcss": "^8.2.8",
+    "prettier": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.43.1",
@@ -48,9 +66,19 @@
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-url": "^3.0.1",
+    "simple-git-hooks": "^2.2.0",
     "typescript": "^4.2.3"
   },
   "dependencies": {
     "node-sass": "^5.0.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
