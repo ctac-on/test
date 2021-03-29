@@ -1,0 +1,118 @@
+$xs: "screen and (max-width: 767px)"
+$sm: "screen and (max-width: 1180px)"
+$xxl: "screen and (max-width: 1980px)"
+$lg: "(min-width: 1280px) and (max-width: 1600px)"
+$ml: "(min-width: 1180px) and (max-width: 1280px)"
+
+$fontSeven: 7px
+$fontEight: 8px
+$fontNine: 9px
+$fontTen: 10px
+$fontEleven: 11px
+$fontTwelve: 12px
+$fontThirteen: 13px
+$mainFontSize: 14px
+$fontFifteen: 15px
+$fontSixteen: 16px
+$fontSeventeen: 17px
+$fontEighteen: 18px
+$fontNineteen: 19px
+$fontTwenty: 20px
+$fontTwentyOne: 21px
+$fontTwentyTwo: 22px
+$fontTwentyFour: 24px
+$fontTwentyFive: 25px
+$fontTwentySix: 26px
+$fontTwentyEight: 28px
+$fontThirty: 30px
+$fontThirtyOne: 31px
+$fontThirtyTwo: 32px
+$fontThirtyFour: 34px
+$fontThirtySix: 36px
+$fontThirtySeven: 37px
+$fontThirtyNine: 39px
+$fontFourty: 40px
+
+// $fontSeven: 0.5rem
+// $fontEight: 0.571rem
+// $fontNine: 0.643rem
+// $fontTen: 0.714rem
+// $fontEleven: 0.786rem
+// $fontTwelve: 0.857rem
+// $fontThirteen: 0.929rem
+// $mainFontSize: 1rem
+// $fontFifteen: 1.071rem
+// $fontSixteen: 1.143rem
+// $fontSeventeen: 1.214rem
+// $fontEighteen: 1.286rem
+// $fontNineteen: 1.357rem
+// $fontTwenty: 1.429rem
+// $fontTwentyTwo: 1.571rem
+// $fontTwentyFour: 1.714rem
+// $fontTwentyFive: 1.786rem
+// $fontTwentySix: 1.857rem
+// $fontTwentyEight: 2rem
+// $fontThirty: 2.143rem
+// $fontThirtyOne: 2.214rem
+// $fontThirtyTwo: 2.286rem
+// $fontThirtyFour: 2.429rem
+// $fontThirtySix: 2.571rem
+// $fontThirtySeven: 2.643rem
+// $fontThirtyNine: 2.786rem
+// $fontFourty: 2.857rem
+
+$colorOrange: #FCB53B
+$colorDarkOrange: #FF7F00
+$colorGreen: #2CC129
+$colorRed: #FF0000
+$colorGray: #8A8A8A
+$colorBlack: #141414
+
+$colorBackGround: #e5e5e5
+$colorOfBorders: #e4e4e4
+$colorProjectTextBlock: #141414
+$backgroundColor: #ffffff
+$textColorGrey: #262626
+$yellowDay: #FCB53B
+
+@function w($value)
+    @return ($value*100vw)/1600
+
+@function width($min, $max)
+    @return $min+'px + ' + $max * ((100vw ) / (4000 - 300))
+
+$white-backgroundApp: #E5E5E5
+$dark-backgroundApp: #777777
+
+.orange
+    background: $colorOrange
+.fontOrange
+    color: $colorOrange
+.fontGray
+    color: $colorGray
+.boxShadowOrange
+    box-shadow: 0px 0px 15px $colorOrange
+.red
+    background: $colorRed
+.fontRed
+    color: $colorRed
+.boxShadowRed
+    box-shadow: 0px 0px 15px $colorRed
+.green
+    background: $colorGreen
+.fontGreen
+    color: $colorGreen
+.boxShadowGreen
+    box-shadow: 0px 0px 15px $colorGreen
+.yellow
+    background: $yellowDay
+.fontYellow
+    color: $yellowDay
+.boxShadowYellow
+    box-shadow: 0px 0px 15px $yellowDay
+.black
+    background: $colorBlack
+.fontBlack
+    color: $colorBlack
+.boxShadowBlack
+    box-shadow: 0px 0px 15px $colorBlack

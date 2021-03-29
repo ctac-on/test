@@ -1,3 +1,3 @@
-import {TestButton2} from "./testButton/TestButton2";
+import BacksComponent from "./BacksComponent/BacksComponent"
 
-export { TestButton2 }
+export { BacksComponent }
